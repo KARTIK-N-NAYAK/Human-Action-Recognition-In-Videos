@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2 class="mt-3 text-center">Human Action Reognition in Videos</h2>
+
+<form method="POST">
+    <input class="form-control mt-3" type="text" placeholder="Enter the YouTube video URL"
+        aria-label="default input example" name="url">
+    <button type="submit" class="btn btn-danger mt-3">Next</button>
+</form>
+
+
+<div>
+    <h1></h1>
+    <h4>Following classes can be predicted</h4>
+</div>
+<div>
+    <ul>
+        <li>BabyCrawling</li>
+        <li>BaseballPitch</li>
+        <li>HorseRace</li>
+        <li>PlayingGuitar</li>
+        <li>Skiing</li>
+        <li>WalkingWithDog</li>
+        <li>Rafting</li>
+        <li>Surfing</li>
+        <li>CuttingInKitchen</li>
+        <li>Typing</li>
+        <li>Haircut</li>
+        <li>Fencing</li>
+        <li>LongJump</li>
+        <li>PushUps</li>
+        <li>Swing</li>
+        <li>YoYo</li>
+        <li>SkyDiving</li>
+        <li>ApplyLipstick</li>
+        <li>Billiards</li>
+        <li>FrisbeeCatch</li>
+
+    </ul>
+</div>
+{% endblock content %}

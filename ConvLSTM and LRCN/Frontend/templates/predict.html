@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+{% block content %}
+<style>
+    .Home {
+        background-color: white;
+        border: 2px solid black;
+        color: black;
+        padding: 5px 10px;
+        text-align: center;
+        display: inline-block;
+        margin: 10px 0px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 30px;
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        padding: 5px 8px;
+      }
+    tr:first-child{
+        background-color: #96D4D4;
+      }
+    table{
+        border-radius: 30px;
+    }
+</style>
+    <br><h1>Results</h1>
+<div>
+    <video width="320" height="240" controls>
+        <source src={{ url_for("static", filename=filename) }} type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+    <div><br>
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Action Predicted</th>
+                <th>Confidence</th>
+            </tr>
+            <tr>
+                <th>LRCN</th>
+                <td>{{LRCN_ClassName}}</td>
+                <td>{{LRCN_conf}}</td>
+            </tr>
+            <tr>
+                <th>ConvLSTM</th>
+                <td>{{ConvLSTM_ClassName}}</td>
+                <td>{{ConvLSTM_conf}}</td>
+            </tr>
+        </table><br>
+    </div>
+
+
+    <div><br>
+        <button class="Home"
+        onclick="window.location.href = '{{ url_for("home") }}';">
+            Home
+        </button>
+    </div>
+{% endblock content %}
